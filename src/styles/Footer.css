@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  margin-top: 4%;
+  width: 100%;
+}
+
+.text-footer {
+  color: rgb(126, 126, 126);
+  margin-left: 5%;
+  margin-right: 5%;
+}

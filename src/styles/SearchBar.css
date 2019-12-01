@@ -1,0 +1,17 @@
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+.inputStyle {
+  font-size: 3em;
+  font-weight: normal;
+  color: #464545;
+  padding: 3px;
+  display: inline-block;
+  width: 76%;
+  border: 0px solid;
+  border-bottom: 1px solid #a7a7a7;
+}

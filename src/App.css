@@ -1,0 +1,91 @@
+.App-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+/*====== Color==========*/
+.color-gray-light {
+  color: #a7a7a7;
+}
+.color-gray {
+  color: #5e5e5e;
+}
+
+.color-dark-gray {
+  color: #464545;
+}
+
+.color-black {
+  color: black;
+}
+/*=======================*/
+
+/*====== Text==========*/
+.text-thin {
+  font-weight: lighter;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+/*=======================*/
+
+hr {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  margin-left: 0;
+  margin-right: 0;
+  border-style: inset;
+  border-width: 1px;
+  border-color: #e0e0e0;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(184, 184, 184);
+  font-weight: 200;
+  opacity: 0.8; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(184, 184, 184);
+  font-weight: 200;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: rgb(184, 184, 184);
+  font-weight: 200;
+}
+
+.div-relative {
+  position: relative;
+}
+
+.div-absolute {
+  position: absolute;
+}
+
+.icon-show {
+  opacity: 1;
+}
+
+.icon-notshow {
+  opacity: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}

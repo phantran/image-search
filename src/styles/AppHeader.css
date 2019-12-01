@@ -1,0 +1,19 @@
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 1px solid #a7a7a7;
+  padding-bottom: 0px;
+}
+
+.text-brand {
+  font-size: 30px;
+  padding-left: 80px;
+  padding-right: 30px;
+}
+
+.text-header {
+  font-size: 30px;
+  padding-right: 18px;
+  padding-left: 18px;
+}
