@@ -49,3 +49,4 @@ http://localhost:3000/
 ## Deploy the application
 
 An online running version of this application can be found here:
+https://phantran.github.io/image-search/
