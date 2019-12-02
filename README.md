@@ -38,7 +38,7 @@ npm start
 To build the project to have static deployable files, run below command
 
 ```
-npm build
+npm run build
 ```
 
 The built files will be generated in ./dist folder
