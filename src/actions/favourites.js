@@ -30,7 +30,7 @@ export const loadFavouriteImages = idFavourites => async dispatch => {
   try {
     let retrieved_ids = idFavourites.join();
     if (retrieved_ids != "") {
-      let response = await axios.get("http://api.giphy.com/v1/gifs", {
+      let response = await axios.get("https://api.giphy.com/v1/gifs", {
         params: {
           ids: retrieved_ids,
           api_key: "QFCVo7yMSBHC6EhFxxPkznOxe7CnZ1aQ"

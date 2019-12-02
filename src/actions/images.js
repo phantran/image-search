@@ -15,7 +15,7 @@ export const getImages = query => async dispatch => {
   });
 
   try {
-    let response = await axios.get("http://api.giphy.com/v1/gifs/search", {
+    let response = await axios.get("https://api.giphy.com/v1/gifs/search", {
       params: {
         q: query,
         api_key: "QFCVo7yMSBHC6EhFxxPkznOxe7CnZ1aQ",
