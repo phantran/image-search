@@ -3,28 +3,32 @@ import axios from "axios";
 import {
   SET_FAVOURITE,
   SET_NOT_FAVOURITE,
-  REMOVE_FAVOURITE,
-  LOAD_FAVOURITE_IMAGES
+  LOAD_FAVOURITE_IMAGES,
+  LOAD_APP,
+  IS_LOADING_FAV,
+  ERROR_GETTING_IMAGES
 } from "./types";
 
-export const setFavourite = (liked, imageUrl) => async dispatch => {
+export const setFavourite = (liked, imageID) => async dispatch => {
   if (liked === true) {
     dispatch({
       type: SET_FAVOURITE,
-      payload: imageUrl
+      payload: imageID
     });
   } else {
     dispatch({
       type: SET_NOT_FAVOURITE,
-      payload: imageUrl
+      payload: imageID
     });
   }
 };
 
 export const loadFavouriteImages = idFavourites => async dispatch => {
+  dispatch({
+    type: IS_LOADING_FAV
+  });
   try {
     let retrieved_ids = idFavourites.join();
-    console.log(retrieved_ids);
     if (retrieved_ids != "") {
       let response = await axios.get("http://api.giphy.com/v1/gifs", {
         params: {
@@ -32,8 +36,7 @@ export const loadFavouriteImages = idFavourites => async dispatch => {
           api_key: "QFCVo7yMSBHC6EhFxxPkznOxe7CnZ1aQ"
         }
       });
-      console.log("here");
-      console.log(response.data);
+
       dispatch({
         type: LOAD_FAVOURITE_IMAGES,
         payload: response.data.data
@@ -45,6 +48,14 @@ export const loadFavouriteImages = idFavourites => async dispatch => {
       });
     }
   } catch (err) {
-    console.log(err);
+    dispatch({
+      type: ERROR_GETTING_IMAGES
+    });
   }
+};
+
+export const loadApp = () => async dispatch => {
+  dispatch({
+    type: LOAD_APP
+  });
 };

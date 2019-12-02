@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { toFavourites, toMainPage } from "../actions/view";
@@ -13,41 +13,61 @@ const AppHeader = ({
   noFavourites,
   favouriteImages
 }) => {
+  const [favouriteClicked, setFavouriteClicked] = useState(false);
+
   return (
     <div className="page-header">
       <div className="text-brand">
-        <p className="color-gray text-thin">
-          Galler
-          <span className="color-dark-gray text-bold">easy</span>
-        </p>
-      </div>
-      <hr />
-      <div className="text-header">
-        <p
-          className="color-dark-gray text-normal"
-          onClick={e => {
-            toMainPage();
-          }}
-        >
-          Search
-        </p>
-      </div>
-      <a>
-        <div className="text-header">
-          <p
-            className="color-gray-light text-normal"
-            onClick={e => {
-              console.log(favouriteImages);
-              loadFavouriteImages(favouriteImages);
-              toFavourites();
-            }}
-          >
-            {noFavourites == 0
-              ? "Favourites"
-              : "Favourites (" + noFavourites + ")"}
+        <div>
+          <p className="color-gray text-thin">
+            Galler
+            <span className="color-dark-gray text-bold">easy</span>
           </p>
         </div>
-      </a>
+      </div>
+
+      <hr className="header-hr" />
+
+      <div className="nav-text">
+        <div className="text-header">
+          <a>
+            <p
+              className={
+                favouriteClicked
+                  ? "color-gray-light text-normal"
+                  : "color-dark-gray text-normal"
+              }
+              onClick={e => {
+                toMainPage();
+                setFavouriteClicked(false);
+              }}
+            >
+              Search
+            </p>
+          </a>
+        </div>
+
+        <div className="text-header">
+          <a>
+            <p
+              className={
+                favouriteClicked
+                  ? "color-dark-gray text-normal"
+                  : "color-gray-light text-normal"
+              }
+              onClick={e => {
+                loadFavouriteImages(favouriteImages);
+                toFavourites();
+                setFavouriteClicked(true);
+              }}
+            >
+              {noFavourites == 0
+                ? "Favourites"
+                : "Favourites (" + noFavourites + ")"}
+            </p>
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

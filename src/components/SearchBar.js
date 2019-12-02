@@ -18,7 +18,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
         <form onSubmit={this.onFormSubmit} className="flexContainer">
           <input
             className="inputStyle"

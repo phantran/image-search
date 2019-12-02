@@ -14,4 +14,47 @@
   width: 76%;
   border: 0px solid;
   border-bottom: 1px solid #a7a7a7;
+  outline: none;
+}
+
+.search-bar {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1100px) {
+  .inputStyle {
+    font-size: 2.8em;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .inputStyle {
+    font-size: 2.5em;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .inputStyle {
+    font-size: 2.2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inputStyle {
+    font-size: 1.9em;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .inputStyle {
+    font-size: 1.7em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .inputStyle {
+    font-size: 1.4em;
+  }
 }

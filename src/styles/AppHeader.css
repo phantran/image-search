@@ -1,19 +1,81 @@
 .page-header {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
   border-bottom: 1px solid #a7a7a7;
-  padding-bottom: 0px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .text-brand {
-  font-size: 30px;
-  padding-left: 80px;
+  display: flex;
+  font-size: 40px;
+  padding-left: 20px;
   padding-right: 30px;
+  margin-left: 50px;
+}
+.text-header {
+  font-size: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
+  cursor: pointer;
 }
 
-.text-header {
-  font-size: 30px;
-  padding-right: 18px;
-  padding-left: 18px;
+.text-header > a > p:hover {
+  color: #464545;
+}
+
+.nav-text {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .text-brand,
+  .text-header {
+    font-size: 37px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .text-brand,
+  .text-header {
+    font-size: 35px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .text-brand,
+  .text-header {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .text-brand,
+  .text-header {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .text-brand,
+  .text-header {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .text-brand,
+  .text-header {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .header-hr {
+    display: none;
+  }
 }

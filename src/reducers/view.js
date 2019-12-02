@@ -17,6 +17,7 @@ export default function(state = initialState, action) {
         ...state,
         showFavourites: false
       };
+
     default:
       return state;
   }
